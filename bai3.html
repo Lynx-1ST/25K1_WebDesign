@@ -43,6 +43,47 @@
 		Nam <input type="radio" name="gender" value="Male" />
 		Nữ <input type="radio" name="gender" value="Female" />
 		<br> <br>
+		<b> Sở thích </b> <br>
+		Game <input type="checkbox" name="hobby" value="game"/>
+		Music <input type="checkbox" name="hobby" value="music"/>
+		Sport <input type="checkbox" name="hobby" value="sport"/>
+		<br>
+		<p> Danh sách trình duyệt Web ưa thích </p>
+		<!-- Datalist -->
+		<!-- Phải trùng với id  -->
+		<input list="browsers" /> 
+			<datalist id="browsers" />
+			<option value="IE">
+			<option value="Firefox">
+			<option value="Google Chrome">
+			<option value="Opera">
+			</datalist>
+		<br>
+		<!-- Selection List -->
+		<select name="browsers" >
+			<option value="IE">IE</option>
+			<option value="Firefox">Firefox</option>
+			<option value="Google Chrome">Google Chrome</option>
+			<option value="Opera">Opera</option>
+			</select>
+		<br>
+		<!-- Selection List có Bảng -->
+		<select name="browsers" multiple>
+			<option value="IE">IE</option>
+			<option value="Firefox">Firefox</option>
+			<option value="Google Chrome">Google Chrome</option>
+			<option value="Opera">Opera</option>
+			</select>
+		<br>
+		<p><b>Cân nặng</b><p>
+		0 <input type="range" id="weight" value="50" /> 100
+		<br>
+		<p><b>Tuổi</b><p>
+		<input type="number" id="age" value="20" />
+		<br>
+		<p><b>Ngày sinh</b><p>
+		<input type="date" id="date"  /> 
+		<br>
 		<input type="submit" />
 		</form>
 	</body>
