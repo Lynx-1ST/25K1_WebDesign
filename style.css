@@ -1,8 +1,122 @@
 /* style.css */
-h1 { 
-	color: blue;
-	}
-h2 {
-	color: gray;
-	background-color: #E9967A;
-	text-align: center;
+/* .box1 {
+  background-color: red;
+  width: 10%;
+  margin: 20px;
+}
+
+.box2 {
+  background-color: blue;
+  margin: 100px auto;
+  width: 50%;
+  padding: 100px;
+}
+.box3 {
+  background-color: green;
+} */
+
+body {
+  margin: 0;
+}
+.danhmuc {
+  background-color: #2fa4e7;
+  display: flex;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 17px;
+  font-family: Roboto, sans-serif !important;
+}
+.banner {
+  background-color: white;
+}
+.noidung {
+  display: flex;
+  font-family: Roboto, sans-serif !important;
+}
+.noidung-trai {
+  width: 80%;
+  background-color: #b3b3b3;
+}
+.noidung-phai {
+  width: 20%;
+  background-color: #b3b3b3;
+}
+.tieude {
+  color: white;
+  background-color: #2fa4e7;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #b3b3b3;
+}
+.tintuc {
+  margin: 5px 0px 5px 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccced1;
+}
+.tintuc-noidung {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 5px;
+}
+.thongbao {
+  margin: 20px 0px 5px 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccced1;
+}
+.noidung-thongbao {
+  display: flex;
+}
+.thongtin {
+  background-color: white;
+  margin-bottom: 2px;
+  padding: 5px;
+  margin-left: 5px;
+}
+.anh {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+.noidung-thongbao-phai {
+  padding: 5px;
+}
+.huongdan {
+  margin: 20px 0px 5px 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccced1;
+}
+.dangnhap {
+  margin: 5px 2px 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccced1;
+}
+.mobile-app {
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px 2px 5px 10px;
+  border: 1px solid #ccced1;
+}
+.qmk {
+  text-align: right;
+}
+.btn {
+  background-color: #0078d4;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+}
+.input {
+  margin: 5px;
+}
