@@ -79,6 +79,8 @@ a {
   margin-bottom: 2px;
   padding: 5px;
   margin-left: 5px;
+  display: block;
+  
 }
 .anh {
   padding: 5px;
@@ -100,6 +102,10 @@ a {
   border-radius: 5px;
   border: 1px solid #ccced1;
 }
+.button {
+	display: block;
+	align-items:center;
+}
 .mobile-app {
   background-color: white;
   border-radius: 5px;
@@ -119,4 +125,9 @@ a {
 }
 .input {
   margin: 5px;
+}
+ul {
+	list-style: none ;
+}
+li {
 }

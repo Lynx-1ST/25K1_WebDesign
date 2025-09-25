@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+}
+input {
+  width: 200px;
+  padding: 10px;
+}
+.giohang {
+  padding: 15px;
+}
+header {
+  display: flex;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: #b3b3b3;
+}
+.logo {
+  background-color: green;
+  height: 50px;
+  width: 120px;
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.danhmuc {
+  background-color: green;
+  height: 50px;
+  width: 70px;
+  padding: 15px;
+}
+.diachi {
+  background-color: green;
+  height: 50px;
+  width: 70px;
+  padding: 15px;
+}
+.timkiem {
+  padding: 20px;
+}
+.giohang {
+  padding: 20px;
+}
+.dangnhap {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+}
+
+.banner-qc-list {
+  display: flex;
+  margin-top: 10px;
+}
+
+.list {
+  background-color: #b3b3b3;
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  margin-right: 2px;
+}
+ul {
+  list-style: none;
+}
+.banner1 {
+  height: 300px;
+  width: 500px;
+  background-color: #b3b3b3;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.qc-all {
+  background-color: #b3b3b3;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+}
+.main1 {
+  background-color: #b3b3b3;
+  height: 300px;
+  border-radius: 5px;
+}
+.list-sanpham1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sp {
+  margin-top: 10px;
+  background-color: antiquewhite;
+  width: 120px;
+  height: 200px;
+  border-radius: 5px;
+}
+.mota {
+  display: inline;
+  width: 120px;
+}
+
+footer {
+  background-color: #b3b3b3;
+  height: 150px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.gt {
+  background-color: paleturquoise;
+  width: 100px;
+  height: 150px;
+  border-radius: 5px;
+}
+.qc2 {
+  background-color: #b3b3b3;
+  height: 100px;
+  border-radius: 5px;
+}
+.main-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}

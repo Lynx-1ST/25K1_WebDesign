@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<title>BaiKiemTra</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.main-wrapper {
+			display: flex;
+			width: 100%;
+			background-color: rgb(255, 115, 0);
+		}
+
+		.trai {
+			color: white;
+			width: 50%;
+			margin: auto;
+			text-align: center;
+		}
+
+		.trai h1 {
+			width: 60%;
+			margin-left: 250px;
+		}
+
+		.phai {
+			width: 50%;
+		}
+
+		.phai-container {
+			width: 70%;
+			background-color: white;
+			border-radius: 15px;
+			padding: 15px 20px;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+
+		.content {
+			text-align: center;
+		}
+
+		.content p {
+			font-size: 18px;
+		}
+
+		.input {
+			width: 80%;
+			margin-left: 30px;
+		}
+
+		.input input,
+		.input select {
+			width: 100%;
+			border: none;
+			padding: 15px;
+			color: gray;
+			border-bottom: 1px solid gray;
+			margin-bottom: 10px;
+		}
+
+		.input-top {
+			gap: 20px;
+			display: flex;
+			width: 105%;
+		}
+
+		.input-top input {
+			width: 55%;
+		}
+
+		.input-top select {
+			width: 45%;
+			color: black;
+			font-size: 16px;
+		}
+
+		.bottom-content {
+			padding: 10px;
+			line-height: 1.6;
+			margin-left: 20px;
+			font-size: 18px;
+			width: 90%;
+		}
+
+		.bottom-content a {
+			text-decoration: none;
+		}
+
+		.bottom-button {
+			width: 40%;
+			margin: auto;
+			margin-bottom: 20px;
+		}
+
+		.bottom-button button {
+			width: 100%;
+			padding: 15px;
+			border: none;
+			border-radius: 20px;
+			background-color: blue;
+			color: white;
+		}
+
+		footer {
+			width: 100%;
+		}
+
+		.footer-wrapper {
+			display: flex;
+			width: 75%;
+			justify-content: center;
+			gap: 40px;
+			margin: auto;
+		}
+
+		.col-content {
+			padding: 10px;
+			margin-top: 40px;
+			width: 40%;
+		}
+
+		.col-content ul {
+			list-style: none;
+		}
+
+		.col-content li {
+			color: gray;
+			padding: 10px;
+		}
+
+		.col-content .top-list {
+			font-weight: bold;
+			color: black;
+			margin-bottom: 20px;
+			font-size: 18px;
+			width: 130%;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="main-wrapper">
+			<div class="trai">
+				<h1> Liên hệ ngay để được dùng thử miễn phí trong 15 ngày </h1>
+			</div>
+			<div class="phai">
+				<div class="phai-container">
+					<div class="content">
+						<h1> Đăng ký trải nghiệm </h1>
+						<p><b> Nhận DEMO toàn bộ tính năng miễn phí </b></p>
+					</div>
+					<div class="input">
+						<span class="input-top">
+							<input placeholder="Họ và tên*" />
+							<select>
+								<option>Chức vụ/Vai trò*</option>
+							</select>
+						</span>
+						<div>
+							<input placeholder="Email*" />
+						</div>
+						<div>
+							<input type="tel" placeholder="Số điện thoại*" name="telephone"
+								pattern="(([0]{1})([0-9]{1})([0-9]{8}))" />
+						</div>
+						<div>
+							<input placeholder="Tên doanh nghiệp/Mã số thuế*" />
+						</div>
+					</div>
+					<div class="bottom-content">
+						<p><i>Bằng cách nhấn vào nút <b>Đăng ký</b>, bạn đã đồng ý với <a href="#">Chính sách quyền
+									riêng tư </a> của MISA.</i></p>
+					</div>
+					<div class="bottom-button">
+						<button><b>Đăng ký nhận tư vấn</b></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="footer-wrapper">
+			<div class="col-content">
+				<ul>
+					<li class="top-list">Hệ sinh thái MISA AMIS</li>
+					<li>AMIS Tài chính - Kế toán</li>
+					<li>AMIS CRM</li>
+					<li>AMIS HRM</li>
+					<li>AMIS Điều hành</li>
+				</ul>
+			</div>
+			<div class="col-content">
+				<ul>
+					<li class="top-list">Công ty </li>
+					<li>Về chúng tôi</li>
+					<li>Tin tức</li>
+					<li>Tuyển dụng</li>
+					<li>Hợp tác</li>
+					<li>Liên hệ</li>
+					<li>Trung tâm khách hàng</li>
+					<li>Câu hỏi thường gặp</li>
+				</ul>
+			</div>
+			<div class="col-content">
+				<ul>
+					<li class="top-list"> Giải pháp</li>
+					<li>Tuyển dụng</li>
+					<li>Thông tin nhân sự</li>
+					<li>C&B</li>
+					<li>Đào tạo - phát triển</li>
+				</ul>
+			</div>
+			<div class="col-content">
+				<ul>
+					<li class="top-list">Kiến thức</li>
+					<li>Chuyển đổi số </li>
+					<li>Nghệ thuật nhân sự</li>
+					<li>Tin tức</li>
+					<li>Luật lao động & bảo hiểm</li>
+				</ul>
+			</div>
+			<div class="col-content">
+				<ul>
+					<li class="top-list"> Khách hàng</li>
+					<li>Hỗ trợ khách hàng</li>
+					<li>Khách hàng tiêu biểu</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

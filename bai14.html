@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> Bai 14</title>
+ </head>
+
+<body> 
+<script>
+	document.writeln("Hello World <br>");
+	
+	//Nối chuỗi
+	document.writeln("Đào Quang" +" " +"Lộc <br>");
+	
+	//Variable
+	var hoTen = "DaoLoc";
+	document.writeln(hoTen + "<br>");
+	
+	//Operators
+	var s1 = 10;
+	var s2 = 5;
+	var kq = 0;
+	kq = s1 + s2;
+	document.writeln("Tổng: " + kq);
+	kq = s1 * s2;
+	document.writeln("Tích: " + kq);
+	kq = s1 ** s2;
+	document.writeln("Bình phương: " + kq);
+	kq = s1 % s2;
+	document.writeln("Dư: " + kq );
+	
+	s1++;
+	document.writeln("<br>Số thứ nhất: " + s1);
+	
+	document.writeln(s1 > s2);
+	// Phủ định - !
+	document.writeln(!(s1 > s2));
+	
+	// Objects
+	var namNay = 2025;
+	var xeOto = {
+	tenHang: "Vinfast",
+	loaiXe: "VF5",
+	namSX: 2020,
+	namMua: 2023,
+	daBan: true,
+	noiSanXuat: {
+			thanhPho: "Hai Phong",
+			thiXa: "Cat Hai"
+		}
+	}
+	
+	document.writeln("<br>" + xeOto.tenHang + " " 
+	+ xeOto.loaiXe + " " 
+	+ xeOto.namSX + " " 
+	+ xeOto.noiSanXuat.thanhPho 
+	+ "<br>Số năm đã mua: " + (namNay - xeOto.namMua));
+	
+</script>
+	
+</body>
+</html>
