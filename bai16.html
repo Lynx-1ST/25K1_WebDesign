@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*         // Popup trong trang web
+                alert("Hello World !");
+                let result = confirm("Press a button");
+                document.writeln(result);
+                if (result) {
+                    document.writeln("You press OK");
+                } else {
+                    document.writeln("You press Cancel");
+                }
+                let rs = prompt("Test", "type here");
+                document.writeln(rs);
+        
+                // Hàm
+                function sayHello() {
+                    document.writeln("Hello World !");
+                }
+                sayHello();
+        
+                function sayHello2(name) {
+                    document.writeln("Xin chào " + name);
+                }
+                sayHello2("Lộc");
+                document.writeln("<br>");
+         */
+
+        // Tương tác giữa Javascript và HTML
+        function nhapVao() {
+            // Lấy điểm từ ô input bằng ID
+            let diemA = parseFloat(document.getElementById("A").value);
+            let diemB = parseFloat(document.getElementById("B").value);
+            let diemC = parseFloat(document.getElementById("C").value);
+            tinhDiem(diemA, diemB, diemC);
+        }
+
+        function tinhDiem(diemA, diemB, diemC) {
+            if (diemA < 0 || diemA > 10) {
+                document.writeln("Điểm A không hợp lệ !")
+            } else if (diemB < 0 || diemB > 10) {
+                document.writeln("Điểm B không hợp lệ !")
+            } else if (diemC < 0 || diemC > 10) {
+                document.writeln("Điểm C không hợp lệ !")
+            } else {
+                let diem = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+                if (diem >= 9 && diem <= 10) {
+                    document.writeln("A+");
+                } else if (diem >= 8.5 && diem < 9) {
+                    document.writeln("A");
+                } else if (diem >= 8 && diem < 8.5) {
+                    document.writeln("B+");
+                } else if (diem >= 7 && diem < 8) {
+                    document.writeln("B");
+                } else if (diem >= 6.5 && diem < 7) {
+                    document.writeln("C+");
+                } else if (diem >= 5.5 && diem < 6.5) {
+                    document.writeln("C");
+                } else if (diem >= 5 && diem < 5.5) {
+                    document.writeln("D+");
+                } else if (diem >= 4 && diem < 5) {
+                    document.writeln("D");
+                } else {
+                    document.writeln("F");
+                }
+                document.writeln(" - " + diem);
+                document.writeln("<br>Điểm A: " + diemA);
+                document.writeln("<br>Điểm B: " + diemB);
+                document.writeln("<br>Điểm C: " + diemC);
+            }
+        }
+        // Tạo hàm xinChao(); , tạo một giao diện có input cho người dùng nhập tên, 1 nút bấm
+        // khi người dùng bấm vào nút đó sẽ hiển thị Xin chào + tên người dùng ở ô input
+        // Sử dụng if-else kiểm tra người dùng có nhập tên hay không
+        // Nếu có: In ra 
+        // Nếu không: Đưa ra cảnh báo
+        function xinChao() {
+            let name = document.getElementById("user").value;
+            if (name == "") {
+                alert("Vui lòng nhập tên của bạn !")
+            } else {
+                document.writeln("Xin chào bạn: " + name);
+            }
+        }
+        // Tạo 2 ô input cho người dùng nhập số (type=number)
+        //Tạo 4 button cộng trừ nhân chia
+        // Khi người dùng nhập vào 2 số -> Hiển thị kết quả tương ứng với button
+
+        function tinh(phepTinh) {
+            let soA = parseFloat(document.getElementById("soA").value);
+            let soB = parseFloat(document.getElementById("soB").value);
+            if (isNaN(soA) || isNaN(soB)) {
+                alert("Vui lòng nhập đủ 2 số!");
+            } else {
+                let s;
+                if (phepTinh == '+') {
+                    s = soA + soB;
+                } else if (phepTinh == '-') {
+                    s = soA - soB;
+                } else if (phepTinh == '*') {
+                    s = soA * soB;
+                } else if (phepTinh == '/') {
+                    if (soB == 0) {
+                        alert("Không thể chia cho 0!");
+                    } else {
+                        s = soA / soB;
+                    }
+                }
+            }
+            document.writeln("Ket qua: " + s)
+        }
+
+
+    </script>
+    <hr>
+    <form>
+        <input class="diemA" id="A" placeholder="Nhập điểm A" />
+        <input class="diemB" id="B" placeholder="Nhập điểm B" />
+        <input class="diemC" id="C" placeholder="Nhập điểm C" />
+        <br> <br>
+        <button onclick="nhapVao()">Xem kết quả</button>
+    </form>
+    <hr>
+    <form>
+        <input id="user" placeholder="Nhập tên người dùng !" />
+        <br> <br>
+        <button onclick="xinChao()">Xác nhận</button>
+    </form>
+    <hr>
+    <form>
+        <input id="soA" placeholder="Nhập số thứ nhất" />
+        <input id="soB" placeholder="Nhập số thứ hai" />
+        <br><br>
+        <button onclick="tinh('+')">Cộng</button>
+        <button onclick="tinh('-')">Trừ</button>
+        <button onclick="tinh('*')">Nhân</button>
+        <button onclick="tinh('/')">Chia</button>
+
+    </form>
+
+</body>
+
+</html>

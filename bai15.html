@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// String - chuỗi
+		// 1. Thay thế 1 kí tự ở trong chuỗi
+		let hoTen = "Dao Quang Loc";
+		document.writeln(hoTen.replace("Loc", "Adu"));
+
+		//2. Tìm kiếm trong chuỗi
+		document.writeln(hoTen.indexOf("c"));
+		document.writeln(hoTen.includes("Loc"));
+
+		//3. datetime
+		let now = new Date();
+		document.writeln(now);
+		let yesterday = new Date("2025-9-25");
+		document.writeln("<br>" + yesterday);
+
+		//4. Vòng lặp for
+		// for (var=start; var<=end; var= var + increasement)
+		let daySo = [1, 2, 3, 4, 5, 6];
+		let hoaQua = ["Cam", "Quýt", "Mít", "Dừa"];
+		document.writeln(hoaQua[0]);
+		for (let i = 0; i < hoaQua.length; i++) {
+			document.writeln("<br>" + i + "." + hoaQua[i]);
+		}
+
+		let thoiTiet = "Mưa";
+		if (thoiTiet == "Mưa") {
+			document.writeln("Nghỉ");
+		} else {
+			document.writeln("Đi học");
+		}
+
+		//BTVN:
+		// Bài 1: Cải tiến lại bài tính điểm
+		// Hiển thị đúng điểm chữ A+, B+ .....
+		// limit lại input, chạy từ 0 - 10; in ra cảnh báo không hợp lệ.
+		let diemA = 10;
+		let diemB = 9;
+		let diemC = 8;
+		if ((diemA < 0 || diemA > 10) || (diemB < 0 || diemB > 10) || (diemC < 0 || diemC > 10)) {
+			document.writeln("Không hợp lệ !")
+		} else {
+			let diem = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+			if (diem >= 9 && diem <= 10) {
+				document.writeln("A+");
+			} else if (diem >= 8.5 && diem < 9) {
+				document.writeln("A");
+			} else if (diem >= 8 && diem < 8.5) {
+				document.writeln("B+");
+			} else if (diem >= 7 && diem < 8) {
+				document.writeln("B");
+			} else if (diem >= 6.5 && diem < 7) {
+				document.writeln("C+");
+			} else if (diem >= 5.5 && diem < 6.5) {
+				document.writeln("C");
+			} else if (diem >= 5 && diem < 5.5) {
+				document.writeln("D+");
+			} else if (diem >= 4 && diem < 5) {
+				document.writeln("D");
+			} else {
+				document.writeln("F");
+			}
+			document.writeln(diem);
+		}
+
+		// Bài 2: Lấy ra thời gian hiện tại, kiểm tra:
+		// Hiển thị số tiết tương ứng với giờ hiện tại (6-20h) 1 tiếng = 1 tiết.
+		let gio = now.getHours();
+		if (gio >= 6 && gio <= 20) {
+			if (gio == 12) {
+				document.writeln("<br>Nghỉ trưa");
+			} else {
+				if (gio < 12) {
+					let tiet = gio - 5;
+					document.writeln("<br>Bây giờ là tiết " + tiet + " vào lúc: " + gio + " giờ");
+				} else if (gio > 12) {
+					let tiet = gio - 6;
+					document.writeln("<br>Bây giờ là tiết " + tiet + " vào lúc: " + gio + " giờ");
+				}
+			}
+		} else {
+			document.writeln("<br>Ngoài giờ học !");
+		}
+
+	</script>
+</body>
+
+</html>
