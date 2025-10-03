@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -82,6 +82,7 @@
         // Sử dụng if-else kiểm tra người dùng có nhập tên hay không
         // Nếu có: In ra 
         // Nếu không: Đưa ra cảnh báo
+
         function xinChao() {
             let name = document.getElementById("user").value;
             if (name == "") {
@@ -90,10 +91,10 @@
                 document.writeln("Xin chào bạn: " + name);
             }
         }
+
         // Tạo 2 ô input cho người dùng nhập số (type=number)
         //Tạo 4 button cộng trừ nhân chia
         // Khi người dùng nhập vào 2 số -> Hiển thị kết quả tương ứng với button
-
         function tinh(phepTinh) {
             let soA = parseFloat(document.getElementById("soA").value);
             let soB = parseFloat(document.getElementById("soB").value);
@@ -113,11 +114,12 @@
                     } else {
                         s = soA / soB;
                     }
+                } else {
+                    document.writeln("Phép tính không hợp lệ !")
                 }
+                document.writeln("Kết quả: " + s)
             }
-            document.writeln("Ket qua: " + s)
         }
-
 
     </script>
     <hr>
@@ -128,22 +130,23 @@
         <br> <br>
         <button onclick="nhapVao()">Xem kết quả</button>
     </form>
+
     <hr>
     <form>
         <input id="user" placeholder="Nhập tên người dùng !" />
         <br> <br>
         <button onclick="xinChao()">Xác nhận</button>
     </form>
+
     <hr>
     <form>
-        <input id="soA" placeholder="Nhập số thứ nhất" />
-        <input id="soB" placeholder="Nhập số thứ hai" />
+        <input id="soA" type="number" placeholder="Nhập số thứ nhất" />
+        <input id="soB" type="number" placeholder="Nhập số thứ hai" />
         <br><br>
         <button onclick="tinh('+')">Cộng</button>
         <button onclick="tinh('-')">Trừ</button>
         <button onclick="tinh('*')">Nhân</button>
         <button onclick="tinh('/')">Chia</button>
-
     </form>
 
 </body>
