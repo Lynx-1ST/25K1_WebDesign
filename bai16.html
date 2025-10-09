@@ -4,7 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oct32025_Javascript</title>
+    <style>
+        .wrapper {
+            padding: 60px;
+            height: 60vh;
+            border: 1px solid gray;
+            width: 40%;
+            margin: auto;
+        }
+
+        .btn,
+        .input {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn button {
+            padding: 7px;
+            border-radius: 5px;
+            width: 50%;
+            border: none;
+            color: black;
+            background-color: rgb(213, 213, 230);
+        }
+
+        .input input {
+            padding: 15px;
+            width: 50%;
+            border-radius: 9999px;
+            border: gray solid 1px;
+            box-shadow: 1px 0.2px 1px gray;
+        }
+
+        .kq {
+            margin: auto;
+            width: 50%;
+            padding: 15px;
+
+        }
+
+        .kq input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 9999px;
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -77,18 +125,18 @@
                 document.writeln("<br>Điểm C: " + diemC);
             }
         }
+
         // Tạo hàm xinChao(); , tạo một giao diện có input cho người dùng nhập tên, 1 nút bấm
         // khi người dùng bấm vào nút đó sẽ hiển thị Xin chào + tên người dùng ở ô input
         // Sử dụng if-else kiểm tra người dùng có nhập tên hay không
         // Nếu có: In ra 
         // Nếu không: Đưa ra cảnh báo
-
         function xinChao() {
             let name = document.getElementById("user").value;
             if (name == "") {
                 alert("Vui lòng nhập tên của bạn !")
             } else {
-                document.writeln("Xin chào bạn: " + name);
+                alert("Xin chào bạn: " + name);
             }
         }
 
@@ -99,29 +147,31 @@
             let soA = parseFloat(document.getElementById("soA").value);
             let soB = parseFloat(document.getElementById("soB").value);
             if (isNaN(soA) || isNaN(soB)) {
-                alert("Vui lòng nhập đủ 2 số!");
+                alert("Nhập đúng 2 số !")
             } else {
                 let s;
-                if (phepTinh == '+') {
+                if (phepTinh == 'cong') {
                     s = soA + soB;
-                } else if (phepTinh == '-') {
+                } else if (phepTinh == 'tru') {
                     s = soA - soB;
-                } else if (phepTinh == '*') {
+                } else if (phepTinh == 'nhan') {
                     s = soA * soB;
-                } else if (phepTinh == '/') {
+                } else if (phepTinh == 'chia') {
                     if (soB == 0) {
                         alert("Không thể chia cho 0!");
                     } else {
                         s = soA / soB;
                     }
-                } else {
-                    document.writeln("Phép tính không hợp lệ !")
                 }
-                document.writeln("Kết quả: " + s)
+                document.getElementById("kq").value = s;
             }
         }
 
+
+
+
     </script>
+
     <hr>
     <form>
         <input class="diemA" id="A" placeholder="Nhập điểm A" />
@@ -139,16 +189,22 @@
     </form>
 
     <hr>
-    <form>
-        <input id="soA" type="number" placeholder="Nhập số thứ nhất" />
-        <input id="soB" type="number" placeholder="Nhập số thứ hai" />
-        <br><br>
-        <button onclick="tinh('+')">Cộng</button>
-        <button onclick="tinh('-')">Trừ</button>
-        <button onclick="tinh('*')">Nhân</button>
-        <button onclick="tinh('/')">Chia</button>
-    </form>
-
+    <div class="wrapper">
+        <div class="input">
+            <input id="soA" type="number" placeholder="Nhập số thứ nhất: " />
+            <input id="soB" type="number" placeholder="Nhập số thứ hai: " />
+        </div>
+        <br>
+        <div class="btn">
+            <button onclick="tinh('cong')">Cộng</button>
+            <button onclick="tinh('tru')">Trừ</button>
+            <button onclick="tinh('nhan')">Nhân</button>
+            <button onclick="tinh('chia')">Chia</button>
+        </div>
+        <div class="kq">
+            <span>Kết quả: <input id="kq" placeholder="Kết quả phép tính sẽ hiển thị ở đây" /></span>
+        </div>
+    </div>
 </body>
 
 </html>

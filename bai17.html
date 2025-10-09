@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anh {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mode {
+            width: 20%;
+            margin: auto;
+
+        }
+
+        .mode button {
+            padding: 20px;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let cheDo = "sang";
+        function readMode() {
+            if (cheDo == "sang") {
+                document.getElementsByTagName('body')[0].style = "background-color: black;";
+                document.getElementsByTagName('img')[0].src = "./assets/moon.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML = "Chế độ tối"
+                document.getElementsByTagName('h1')[0].style = "color: white;"
+                cheDo = "toi";
+            } else {
+                document.getElementsByTagName('body')[0].style = "background-color: white;";
+                document.getElementsByTagName('img')[0].src = "./assets/sun.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML = "Chế độ sáng"
+                document.getElementsByTagName('h1')[0].style = "color: black;"
+                cheDo = "sang";
+            }
+        }
+
+        function showHidden() {
+            if (cheDo == "sang") {
+                document.getElementsByTagName('h2')[0].innerHTML = "Mặt trời có đẹp không ?";
+                document.getElementsByTagName('h1')[0].style = "color: black;, display: block;";
+            } else {
+                document.getElementsByTagName('h2')[0].innerHTML = "Mặt trăng có đẹp không ?";
+                document.getElementsByTagName('h1')[0].style = "color: white;, display: block;";
+            }
+        }
+
+        function hiddenItem() {
+
+        }
+    </script>
+    <div class="anh">
+        <img src="assets/sun.jpg" width="200px">
+    </div>
+    <div>
+        <h2 style="display: none;">Ảnh đẹp không ?</h2>
+    </div>
+    <div class="mode">
+        <span>
+            <h1>Chế độ sáng </h1>
+            <button onclick="readMode()">Mode</button>
+        </span>
+    </div>
+
+</body>
+
+</html>
