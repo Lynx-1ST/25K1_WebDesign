@@ -10,6 +10,22 @@
 </head>
 
 <body>
+	<script>
+		const image = ["./assets/image.png", "./assets/.sun.jpg", "./assets/logo.png", "./assets/moon.jpg"];
+		function nextVid() {
+			let img = document.getElementById("g1");
+			if (img.src == "" || img.src == null) {
+				img.src = image[1];
+				function nextVid() {
+					let i = 0;
+					i++;
+					img.src(image[i]);
+				}
+
+			}
+		}
+	</script>
+	
 	<div class="main-wrapper">
 		<!-- Cột trái -->
 		<div class="vitri-trai">
@@ -40,32 +56,12 @@
 		<!-- Cột giữa -->
 		<div class="vitri-giua">
 			<div class="video">
-				<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bykovfx/video/7545796456385449223"
-					data-video-id="7545796456385449223" style="max-width: 605px;min-width: 325px;">
-					<section> <a target="_blank" title="@bykovfx"
-							href="https://www.tiktok.com/@bykovfx?refer=embed">@bykovfx</a> Iphone 17 pro max <a
-							title="iphone" target="_blank"
-							href="https://www.tiktok.com/tag/iphone?refer=embed">#iphone</a> <a title="iphone17"
-							target="_blank" href="https://www.tiktok.com/tag/iphone17?refer=embed">#iphone17</a> <a
-							title="iphone17pro" target="_blank"
-							href="https://www.tiktok.com/tag/iphone17pro?refer=embed">#iphone17pro</a> <a
-							title="lphone17promax" target="_blank"
-							href="https://www.tiktok.com/tag/lphone17promax?refer=embed">#lphone17promax</a> <a
-							title="apple" target="_blank" href="https://www.tiktok.com/tag/apple?refer=embed">#apple</a>
-						<a title="appleevent2025" target="_blank"
-							href="https://www.tiktok.com/tag/appleevent2025?refer=embed">#appleevent2025</a> <a
-							target="_blank" title="♬ оригинальный звук - bykovfx"
-							href="https://www.tiktok.com/music/оригинальный-звук-7545796499926436625?refer=embed">♬
-							оригинальный звук - bykovfx</a>
-					</section>
-				</blockquote>
-				<script async src="https://www.tiktok.com/embed.js"></script>
+				<img id="g1" src="" />
 			</div>
-
 			<div class="etc">
-				<div class="chucnang">
+				<button class="chucnang" onclick('nextVid()')>
 					<i class="fa fa-heart icon" aria-hidden="true"></i>
-				</div>
+				</button>
 				<div class="chucnang">
 					<i class="fa fa-heart icon" aria-hidden="true"></i>
 				</div>

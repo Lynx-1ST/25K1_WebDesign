@@ -92,13 +92,14 @@
 		document.getElementsByTagName('input')[1].style = "border:none";
 
 		if (user.value == "" || !account_username.includes(user.value)) {
-			document.getElementsByTagName('input')[0].style = "border: 2px solid red;"
+			document.getElementsByTagName('input')[0].style = "border: 2px solid red;";
 			user_valid = false;
 		}
 		if (pw.value == "" || !account_pass.includes(pw.value)) {
-			document.getElementsByTagName('input')[1].style = "border: 2px solid red;"
+			document.getElementsByTagName('input')[1].style = "border: 2px solid red;";
 			pass_valid = false;
 		}
+
 		if (!user_valid && !pass_valid) {
 			alert("Vui long nhap dung thong tin !")
 		} else if (!user_valid) {
